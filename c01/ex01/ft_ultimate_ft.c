@@ -6,18 +6,18 @@
 /*   By: marbarre <marbarre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/21 00:22:12 by marbarre          #+#    #+#             */
-/*   Updated: 2024/09/21 02:16:31 by marbarre         ###   ########.fr       */
+/*   Updated: 2024/09/21 19:26:34 by marbarre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+//#include <stdio.h>
 
 void	ft_ultimate_ft(int *********nbr)
 {
 	*********nbr = 42;
 }
 
-int	main(void)
+/*int	main(void)
 {
 	int	input;
 	int	*p1;
@@ -41,6 +41,6 @@ int	main(void)
 	p8 = &p7;
 	p9 = &p8;
 	ft_ultimate_ft(p9);
-	printf("Nem Value: %d\n", input);
+	printf("New Value: %d\n", input);
 	return (0);
-}
+}*/
