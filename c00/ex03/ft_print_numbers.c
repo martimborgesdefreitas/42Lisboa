@@ -1,48 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_comb.c                                    :+:      :+:    :+:   */
+/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marbarre <marbarre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/20 22:06:55 by marbarre          #+#    #+#             */
-/*   Updated: 2024/09/22 18:18:27 by marbarre         ###   ########.fr       */
+/*   Created: 2024/09/19 21:56:24 by marbarre          #+#    #+#             */
+/*   Updated: 2024/09/22 18:17:56 by marbarre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_print_comb(void)
+void	ft_print_numbers(void)
 {
-	char	c;
-	char	t;
-	char	u;
+	char	num;
 
-	c = '0';
-	while (c <= '7')
-	{
-		t = c + 1;
-		while (t <= '8')
-		{
-			u = t + 1;
-			while (u <= '9')
-			{
-				write(1, &c, 1);
-				write(1, &t, 1);
-				write(1, &u, 1);
-				if (c != '7')
-					write(1, ", ", 2);
-				u++;
-			}
-			t++;
-		}
-		c++;
-	}
+	num = 47;
+	while (++num < 58)
+		write (1, &num, 1);
 }
 
 /*int	main(void)
 {
-	ft_print_comb();
+	ft_print_numbers();
 	return (0);
-}
-*/
+}*/
