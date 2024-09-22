@@ -6,43 +6,44 @@
 /*   By: marbarre <marbarre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/21 23:45:35 by marbarre          #+#    #+#             */
-/*   Updated: 2024/09/22 01:58:41 by marbarre         ###   ########.fr       */
+/*   Updated: 2024/09/22 16:44:59 by marbarre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
+// #include <stdio.h>
 
-void ft_rev_int_tab(int *tab, int size)
+void	ft_rev_int_tab(int *tab, int size)
 {
-	int i;
-	int rev_i;
-	int temp_arr[size];
+	int	i;
+	int	temp;
 
 	i = 0;
-	rev_i = 0;
-	while (i < size)
+	while (i < size / 2)
 	{
-		temp_arr[i] = tab[i];
+		temp = tab[i];
+		tab[i] = tab[size - 1 - i];
+		tab[size - 1 - i] = temp;
 		i++;
 	}
-	while (rev_i < size)
-	{
-		tab[rev_i] = temp_arr[size - 1 - rev_i];
-		//printf("%d", tab[rev_i]);
-		//if (rev_i < size -1)
-			//printf(", ");
-		rev_i++;
-	}
-	//printf("\n");
 }
 
-int main(void)
+/*int main(void)
 {
     int arr[3];
 
     arr[0] = 7;
 	arr[1] = 8;
-	arr[2] = 9;
+	arr[2] = 9;ex
     ft_rev_int_tab(arr, 3);
     return (0);
 }
+
+i = 0; // print array loop
+	while (i < size)
+	{
+		printf("%d", tab[i]);
+		if (i < size - 1)
+			printf(", ");
+		i++;	
+	}
+	printf("\n");*/
