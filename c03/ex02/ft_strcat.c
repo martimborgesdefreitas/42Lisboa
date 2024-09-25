@@ -1,49 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rev_int_tab.c                                   :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marbarre <marbarre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/21 23:45:35 by marbarre          #+#    #+#             */
-/*   Updated: 2024/09/25 21:28:27 by marbarre         ###   ########.fr       */
+/*   Created: 2024/09/25 23:31:42 by marbarre          #+#    #+#             */
+/*   Updated: 2024/09/25 23:58:01 by marbarre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
+#include <stdio.h>
 
-void	ft_rev_int_tab(int *tab, int size)
+char	*ft_strcat(char *dest, char *src)
 {
 	int	i;
-	int	temp;
+	int	j;
 
 	i = 0;
-	while (i < size / 2)
-	{
-		temp = tab[i];
-		tab[i] = tab[size - 1 - i];
-		tab[size - 1 - i] = temp;
+	j = 0;
+	while (dest[i] != '\0')
 		i++;
-	}
-}
-
-/*int main(void)
-{
-    int arr[3];
-
-    arr[0] = 7;
-	arr[1] = 8;
-	arr[2] = 9;
-    ft_rev_int_tab(arr, 3);
-    return (0);
-}
-
-i = 0; // print array loop
-	while (i < size)
+	if (dest[i] == '\0')
 	{
-		printf("%d", tab[i]);
-		if (i < size - 1)
-			printf(", ");
-		i++;	
+		while (src[j] != '\0')
+		{
+			dest[i + j] = src[j];
+			j++;
+		}
 	}
-	printf("\n");*/
+	dest[i + j] = '\0';
+	return (dest);
+}
+
+/*int	main(void)
+{
+	char dest[20];
+	char	src[2];
+
+	dest[0] = 'H';
+	dest[1] = 'e';
+	dest[2] = '\0';
+	src[0] = 'y';
+	src[1] = '\0';
+	//ft_strcat (dest, src);
+	printf("%s", ft_strcat(dest, src));
+	return(0);
+}*/
