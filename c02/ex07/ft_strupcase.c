@@ -6,7 +6,7 @@
 /*   By: marbarre <marbarre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 22:57:51 by marbarre          #+#    #+#             */
-/*   Updated: 2024/09/24 23:39:42 by marbarre         ###   ########.fr       */
+/*   Updated: 2024/09/26 20:59:51 by marbarre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char	*ft_strupcase(char *str)
 
 	str[0] = 'h';
 	str[1] = 'a';
-	str[2] = 'A';
+	str[2] = '3';
 	str[3] = '\0';
 	
 	ft_strupcase(str);
