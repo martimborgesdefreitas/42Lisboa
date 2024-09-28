@@ -6,11 +6,11 @@
 /*   By: marbarre <marbarre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 20:14:00 by marbarre          #+#    #+#             */
-/*   Updated: 2024/09/24 20:57:29 by marbarre         ###   ########.fr       */
+/*   Updated: 2024/09/28 22:43:01 by marbarre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
+#include <stdio.h>
 
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
@@ -37,7 +37,7 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 	str[1] = 'e';
 	str[2] = 'y';
 	str[3] = '\0';
-	ft_strncpy(dest, str, 5);
+	ft_strncpy(dest, str, 2);
 	printf("%s\n", dest);
 	return(0);
 }*/

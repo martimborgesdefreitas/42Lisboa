@@ -6,7 +6,7 @@
 /*   By: marbarre <marbarre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 19:05:39 by marbarre          #+#    #+#             */
-/*   Updated: 2024/09/28 20:21:46 by marbarre         ###   ########.fr       */
+/*   Updated: 2024/09/28 21:43:11 by marbarre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_iterative_factorial(int nb)
 {
-	int calc;
+	int	calc;
 
 	calc = nb;
 	while (nb - 1 != 0)

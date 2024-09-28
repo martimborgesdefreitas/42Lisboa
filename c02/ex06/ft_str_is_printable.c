@@ -6,11 +6,11 @@
 /*   By: marbarre <marbarre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 22:46:54 by marbarre          #+#    #+#             */
-/*   Updated: 2024/09/24 22:54:24 by marbarre         ###   ########.fr       */
+/*   Updated: 2024/09/28 22:47:53 by marbarre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
+#include <stdio.h>
 
 int	ft_str_is_printable(char *str)
 {
@@ -33,7 +33,7 @@ int	ft_str_is_printable(char *str)
 	char	str[4];
 	int	result;
 
-	str[0] = '\0';
+	str[0] = '\n';
 	str[1] = 'A';
 	str[2] = 'A';
 	str[3] = '\0';

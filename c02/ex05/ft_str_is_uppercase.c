@@ -6,11 +6,11 @@
 /*   By: marbarre <marbarre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 22:37:23 by marbarre          #+#    #+#             */
-/*   Updated: 2024/09/24 22:47:08 by marbarre         ###   ########.fr       */
+/*   Updated: 2024/09/28 22:46:54 by marbarre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
+#include <stdio.h>
 
 int	ft_str_is_uppercase(char *str)
 {
@@ -34,7 +34,7 @@ int	ft_str_is_uppercase(char *str)
 	int	result;
 
 	str[0] = 'A';
-	str[1] = 'A';
+	str[1] = 'a';
 	str[2] = 'A';
 	str[3] = '\0';
 	

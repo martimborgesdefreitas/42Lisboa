@@ -6,7 +6,7 @@
 /*   By: marbarre <marbarre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 21:02:50 by marbarre          #+#    #+#             */
-/*   Updated: 2024/09/28 21:15:10 by marbarre         ###   ########.fr       */
+/*   Updated: 2024/09/28 21:43:46 by marbarre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_iterative_power(int nb, int power)
 {
-	int res;
-	int i;
+	int	res;
+	int	i;
 
 	i = 1;
 	res = 1;

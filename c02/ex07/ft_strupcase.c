@@ -6,11 +6,11 @@
 /*   By: marbarre <marbarre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 22:57:51 by marbarre          #+#    #+#             */
-/*   Updated: 2024/09/26 20:59:51 by marbarre         ###   ########.fr       */
+/*   Updated: 2024/09/28 22:48:44 by marbarre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
+#include <stdio.h>
 
 char	*ft_strupcase(char *str)
 {

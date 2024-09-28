@@ -6,11 +6,11 @@
 /*   By: marbarre <marbarre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 22:01:54 by marbarre          #+#    #+#             */
-/*   Updated: 2024/09/24 22:33:48 by marbarre         ###   ########.fr       */
+/*   Updated: 2024/09/28 22:45:07 by marbarre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
+#include <stdio.h>
 
 int	ft_str_is_numeric(char *str)
 {
@@ -34,7 +34,7 @@ int	ft_str_is_numeric(char *str)
 	int result;
 
 	str[0] = '1';
-	str[1] = '1';
+	str[1] = 'a';
 	str[2] = '1';
 	str[3] = '\0';
 	result = ft_str_is_numeric(str);
