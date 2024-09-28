@@ -6,11 +6,11 @@
 /*   By: marbarre <marbarre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/21 23:45:35 by marbarre          #+#    #+#             */
-/*   Updated: 2024/09/25 21:28:27 by marbarre         ###   ########.fr       */
+/*   Updated: 2024/09/28 15:02:52 by marbarre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
+#include <stdio.h>
 
 void	ft_rev_int_tab(int *tab, int size)
 {
@@ -36,9 +36,9 @@ void	ft_rev_int_tab(int *tab, int size)
 	arr[2] = 9;
     ft_rev_int_tab(arr, 3);
     return (0);
-}
+}/*
 
-i = 0; // print array loop
+/*i = 0; // print array loop
 	while (i < size)
 	{
 		printf("%d", tab[i]);

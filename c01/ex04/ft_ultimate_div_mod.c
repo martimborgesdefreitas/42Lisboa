@@ -6,12 +6,11 @@
 /*   By: marbarre <marbarre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/21 21:55:40 by marbarre          #+#    #+#             */
-/*   Updated: 2024/09/21 22:38:34 by marbarre         ###   ########.fr       */
+/*   Updated: 2024/09/28 14:57:37 by marbarre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
-/* printf("a = %d and b = %d", *a, *b); */
+#include <stdio.h>
 
 void	ft_ultimate_div_mod(int *a, int *b)
 {
@@ -27,8 +26,9 @@ void	ft_ultimate_div_mod(int *a, int *b)
 	int a1;
 	int a2;
 
-	a1 = 24;
+	a1 = 23;
 	a2 = 7;
 	ft_ultimate_div_mod(&a1, &a2);
+	printf("%d, mod = %d", a1, a2);
 	return(0);
 }*/

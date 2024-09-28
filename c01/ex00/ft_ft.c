@@ -6,11 +6,11 @@
 /*   By: marbarre <marbarre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 23:33:36 by marbarre          #+#    #+#             */
-/*   Updated: 2024/09/21 19:25:22 by marbarre         ###   ########.fr       */
+/*   Updated: 2024/09/28 14:50:29 by marbarre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
+#include <stdio.h>
 
 void	ft_ft(int *nbr)
 {

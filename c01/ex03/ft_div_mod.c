@@ -6,11 +6,11 @@
 /*   By: marbarre <marbarre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/21 20:06:43 by marbarre          #+#    #+#             */
-/*   Updated: 2024/09/21 21:53:54 by marbarre         ###   ########.fr       */
+/*   Updated: 2024/09/28 14:54:19 by marbarre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
+#include <stdio.h>
 
 void	ft_div_mod(int a, int b, int *div, int *mod)
 {
@@ -30,5 +30,6 @@ void	ft_div_mod(int a, int b, int *div, int *mod)
 	div1 = 99;
 	mod1 = 98;
 	ft_div_mod(a1, a2, &div1, &mod1);
+	printf("%d, mod = %d", div1,mod1);
 	return(0);
 }*/
