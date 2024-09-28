@@ -6,7 +6,7 @@
 /*   By: marbarre <marbarre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/22 01:50:17 by marbarre          #+#    #+#             */
-/*   Updated: 2024/09/28 15:05:11 by marbarre         ###   ########.fr       */
+/*   Updated: 2024/09/28 19:55:17 by marbarre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,18 @@ void	ft_sort_int_tab(int *tab, int size)
 		}
 		i++;
 	}
+	i = 0; // print array loop
+	while (i < size)
+	{
+		printf("%d", tab[i]);
+		if (i < size - 1)
+			printf(", ");
+		i++;	
+	}
+printf("\n");
 }
 
-/*int main(void)
+int main(void)
 {
 	int arr[3];
 
@@ -45,7 +54,7 @@ void	ft_sort_int_tab(int *tab, int size)
 	arr[2] = 9;
 	ft_sort_int_tab(arr, 3);
 	return (0);
-}*/
+}
 
 /*i = 0; // print array loop
 while (i < size)
