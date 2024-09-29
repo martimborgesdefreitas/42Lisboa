@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rev_params.c                                    :+:      :+:    :+:   */
+/*   ft_sort_params.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marbarre <marbarre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/29 01:52:21 by marbarre          #+#    #+#             */
-/*   Updated: 2024/09/29 18:16:19 by marbarre         ###   ########.fr       */
+/*   Created: 2024/09/29 18:53:58 by marbarre          #+#    #+#             */
+/*   Updated: 2024/09/29 19:28:56 by marbarre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,20 +22,48 @@ int	ft_strlen(char *str)
 	return (i);
 }
 
-int	main(int argc, char *argv[])
+int	ft_strcmp(char *s1, char *s2)
 {
-	int		j;
-	int		wback;
+	while (*s1 == *s2 && *s1 != '\0')
+	{
+		s1++;
+		s2++;
+	}
+	return (*s1 - *s2);
+}
+
+int	main(int argc,char *argv[])
+{
+	int i;
+	int	i2;
+	int wback;
+	int	temp;
+	int	j;
 	char	lf;
 
+	i = 0;
+	wback = argc - 1 - i;
+	while (i < argc - 1)
+	{
+		i2 = 0;
+		while (i2 < argc - 1 - i)
+		{
+			if (argv[i2] > argv[i2 + 1])
+			{	
+				temp = argv[i2];
+				argv[i2] = argv[i2 + 1];
+				argv[i2 + 1] = temp;
+			}
+			i2++;
+		}
+		i++;
+	}
 	j = 0;
 	lf = 10;
-	while (j < argc - 1)
+	while (j < argc)
 	{
-		wback = argc - 1 - j;
-		write(1, argv[wback], ft_strlen(argv[wback]));
+		write(1, argv[j], ft_strlen(argv[j]));
 		write(1, &lf, 1);
 		j++;
 	}
-	return (0);
 }
