@@ -1,49 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rev_int_tab.c                                   :+:      :+:    :+:   */
+/*   ft_print_params.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marbarre <marbarre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/21 23:45:35 by marbarre          #+#    #+#             */
-/*   Updated: 2024/09/29 01:57:38 by marbarre         ###   ########.fr       */
+/*   Created: 2024/09/29 00:52:23 by marbarre          #+#    #+#             */
+/*   Updated: 2024/09/29 01:51:12 by marbarre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <unistd.h>
 
-void	ft_rev_int_tab(int *tab, int size)
+int	ft_strlen(char *str)
 {
 	int	i;
-	int	temp;
 
 	i = 0;
-	while (i < size / 2)
-	{
-		temp = tab[i];
-		tab[i] = tab[size - 1 - i];
-		tab[size - 1 - i] = temp;
+	while (str[i] != 0)
 		i++;
-	}
+	return (i);
 }
 
-int main(void)
+int	main(int argc, char *argv[])
 {
-    int arr[3];
+	int		j;
+	char	lf;
 
-    arr[0] = 7;
-	arr[1] = 8;
-	arr[2] = 9;
-    ft_rev_int_tab(arr, 3);
-    return (0);
-}
-
-/*i = 0; // print array loop
-	while (i < size)
+	j = 1;
+	lf = 10;
+	while (j < argc)
 	{
-		printf("%d", tab[i]);
-		if (i < size - 1)
-			printf(", ");
-		i++;	
+		write(1, argv[j], ft_strlen(argv[j]));
+		write(1, &lf, 1);
+		j++;
 	}
-	printf("\n");*/
+	return (0);
+}
