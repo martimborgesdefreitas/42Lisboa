@@ -6,7 +6,7 @@
 /*   By: marbarre <marbarre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 20:14:00 by marbarre          #+#    #+#             */
-/*   Updated: 2024/09/28 22:43:01 by marbarre         ###   ########.fr       */
+/*   Updated: 2024/09/29 17:27:02 by marbarre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,14 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 	unsigned int	i;
 
 	i = 0;
+	while (i < n && src[i] != '\0')
+	{
+		dest[i] = src[i];
+		i++;
+	}
 	while (i < n)
 	{
-		if (src[i] != '\0')
-			dest[i] = src[i];
-		else
-			dest[i] = '\0';
+		dest[i] = '\0';
 		i++;
 	}
 	return (dest);
@@ -37,7 +39,7 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 	str[1] = 'e';
 	str[2] = 'y';
 	str[3] = '\0';
-	ft_strncpy(dest, str, 2);
+	ft_strncpy(dest, str, 10);
 	printf("%s\n", dest);
 	return(0);
 }*/

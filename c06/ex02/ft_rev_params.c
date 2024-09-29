@@ -6,7 +6,7 @@
 /*   By: marbarre <marbarre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 01:52:21 by marbarre          #+#    #+#             */
-/*   Updated: 2024/09/29 02:02:24 by marbarre         ###   ########.fr       */
+/*   Updated: 2024/09/29 16:14:48 by marbarre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,18 @@ int	ft_strlen(char *str)
 	return (i);
 }
 
-
 int	main(int argc, char *argv[])
 {
-	
+	int		j;
+	char	lf;
+
+	j = argc - 1 - in;
+	lf = 10;
+	while (j < argc)
+	{
+		write(1, argv[j], ft_strlen(argv[j]));
+		write(1, &lf, 1);
+		j++;
+	}
+	return (0);
 }
