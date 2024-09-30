@@ -1,42 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_ultimate_range.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marbarre <marbarre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/25 21:28:49 by marbarre          #+#    #+#             */
-/*   Updated: 2024/09/30 22:09:50 by marbarre         ###   ########.fr       */
+/*   Created: 2024/09/30 21:40:03 by marbarre          #+#    #+#             */
+/*   Updated: 2024/09/30 21:40:57 by marbarre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <stdlib.h>
 
-int	ft_strcmp(char *s1, char *s2)
+int	ft_ultimate_range(int **range, int min, int max)
 {
-	while (*s1 == *s2 && *s1 != '\0')
-	{
-		s1++;
-		s2++;
-	}
-	return (*s1 - *s2);
+	
 }
-
-/*int main(void)
-{
-	int result;
-	char s1[4];
-	char s2[4];
-
-	s1[0] = 'H';
-	s1[1] = 'e';
-	s1[2] = 'y';
-	s2[0] = 'H';
-	s2[1] = 'e';
-	s2[2] = 'y';
-	s1[3] = '\0';
-	s2[3] = '\0';
-	result = ft_strcmp(s1, s2);
-	printf("%d", result);
-	return (0);
-}*/
