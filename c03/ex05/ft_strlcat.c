@@ -6,7 +6,7 @@
 /*   By: marbarre <marbarre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 01:01:30 by marbarre          #+#    #+#             */
-/*   Updated: 2024/09/27 01:59:19 by marbarre         ###   ########.fr       */
+/*   Updated: 2024/10/01 21:44:32 by marbarre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	if (size > i)
 	{
 		j = 0;
-		while (src[j] != '\0' && i + j < size)
+		while (src[j] != '\0' && i + j + 1 < size)
 		{
 			dest[i + j] = src[j];
 			j++;
