@@ -6,11 +6,21 @@
 /*   By: marbarre <marbarre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 17:50:41 by marbarre          #+#    #+#             */
-/*   Updated: 2024/09/28 19:02:03 by marbarre         ###   ########.fr       */
+/*   Updated: 2024/10/02 22:55:34 by marbarre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+
+int	checkspace(char *str)
+{
+	int	i;
+	
+	i = 0;
+	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
+		i++;
+	return (i);
+}
 
 int	ft_atoi(char *str)
 {
@@ -18,11 +28,9 @@ int	ft_atoi(char *str)
 	int	posneg;
 	int	num;
 
-	i = 0;
 	posneg = 0;
 	num = 0;
-	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
-		i++;
+	i = checkspace(str);
 	while (str[i] == 45 || str[i] == 43)
 	{
 		if (str[i] == 45)
@@ -40,9 +48,11 @@ int	ft_atoi(char *str)
 		return (num);
 }
 
-/*int main(void)
+int main(void)
 {
-	char str[22] = "     ---+--+1234ab567";
+	//char str[22] = "     ---+--+1234ab567";
+	//char str[] = "-2147483648";
+	char	str[] = "     -+-+-++--+-2077782356";
 	printf("%d", ft_atoi(str));
 	return (0);
-}*/
+}
