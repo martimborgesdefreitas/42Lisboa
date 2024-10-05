@@ -6,7 +6,7 @@
 /*   By: marbarre <marbarre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 18:53:58 by marbarre          #+#    #+#             */
-/*   Updated: 2024/09/29 22:00:11 by marbarre         ###   ########.fr       */
+/*   Updated: 2024/10/05 17:00:21 by marbarre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void	print_argv(int argc, char *argv[])
 	int		j;
 	char	lf;
 
-	j = 0;
+	j = 1;
 	lf = 10;
 	while (j < argc)
 	{

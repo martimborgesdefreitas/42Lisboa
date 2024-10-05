@@ -1,35 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_recursive_power.c                               :+:      :+:    :+:   */
+/*   ft_print_program_name.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marbarre <marbarre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/28 21:28:14 by marbarre          #+#    #+#             */
-/*   Updated: 2024/09/28 21:39:39 by marbarre         ###   ########.fr       */
+/*   Created: 2024/09/29 00:26:22 by marbarre          #+#    #+#             */
+/*   Updated: 2024/10/05 16:52:19 by marbarre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <unistd.h>
 
-int	ft_recursive_power(int nb, int power)
+int	main(int argc, char *argv[])
 {
-	if (power < 0)
-		return (0);
-	if (power == 0 && nb == 0)
-		return (1);
-	if (power == 1)
-		return (nb);
-	return (nb * ft_recursive_power(nb, power - 1));
-}
+	char	i;
+	char	*str;
+	int		count;
 
-/*int	main(void)
-{
-	int nb;
-	int power;
-
-	nb = 2;
-	power = 8;
-	printf("%d", ft_recursive_power(nb, power));
+	i = 10;
+	count = 0;
+	str = argv[0];
+	while (str[count] != '\0')
+		count++;
+	if (argc == 1)
+	{
+		write (1, argv[0], count);
+		write (1, &i, 1);
+	}
 	return (0);
-}*/
+}

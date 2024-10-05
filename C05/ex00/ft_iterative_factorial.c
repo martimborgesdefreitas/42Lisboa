@@ -1,31 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_program_name.c                            :+:      :+:    :+:   */
+/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marbarre <marbarre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/29 00:26:22 by marbarre          #+#    #+#             */
-/*   Updated: 2024/09/29 01:34:37 by marbarre         ###   ########.fr       */
+/*   Created: 2024/09/28 19:05:39 by marbarre          #+#    #+#             */
+/*   Updated: 2024/10/05 16:43:23 by marbarre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdio.h>
 
-int	main(int argc, char *argv[])
+int	ft_iterative_factorial(int nb)
 {
-	char	i;
-	char	*str;
-	char	count;
+	int	calc;
 
-	i = 10;
-	*str = argv[0];
-	while (argv[count] != '\0')
-		count++;
-	if (argc == 1)
+	if (nb < 0)
+		return (0);
+	calc = 1;
+	while (nb > 1)
 	{
-		write (1, argv[0], count);
-		write (1, &i, 1);
+		calc = calc * nb;
+		nb = nb - 1;
 	}
-	return (0);
+	return (calc);
 }
+
+/*int	main(void)
+{
+	int n;
+
+	n = 8;
+	ft_iterative_factorial(n);
+	printf("%d", ft_iterative_factorial(n));
+	return (0);
+}*/
