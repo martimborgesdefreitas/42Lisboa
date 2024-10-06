@@ -6,7 +6,7 @@
 /*   By: marbarre <marbarre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/06 00:35:43 by marbarre          #+#    #+#             */
-/*   Updated: 2024/10/06 18:48:09 by marbarre         ###   ########.fr       */
+/*   Updated: 2024/10/06 21:45:10 by marbarre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,12 +91,15 @@ char	**ft_split(char *str, char *charset)
 	char	*word;
 	int		len;
 	int		i;
+	int		wordt;
 
 	i = 0;
-	arr = malloc((word_count(str, charset) + 1) * sizeof(char *));
+	wordt = word_count(str, charset);
+	arr = malloc((wordt + 1) * sizeof(char *));
+	//printf("%d\n", word_count(str, charset));
 	if (arr == NULL)
 		return (NULL);
-	while (*str != '\0' && i < word_count(str, charset))
+	while (*str != '\0' && i < wordt)
 	{
 		str = skip_sep(str, charset);
 		len = word_length(str, charset);
