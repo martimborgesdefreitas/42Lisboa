@@ -6,7 +6,7 @@
 /*   By: marbarre <marbarre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 23:03:25 by marbarre          #+#    #+#             */
-/*   Updated: 2024/10/05 18:42:51 by marbarre         ###   ########.fr       */
+/*   Updated: 2024/10/05 22:01:31 by marbarre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,9 +97,9 @@ void	ft_putnbr_base(int nbr, char *base)
 	}
 }
 
-/*int	main(void)
+int	main(void)
 {
-	int     nbr = -2147483648;
-	char    *base = "01";
+	int     nbr = 1234;
+	char    *base = "poneyvifkl4817871";
 	ft_putnbr_base(nbr, base);
-}*/
+}
