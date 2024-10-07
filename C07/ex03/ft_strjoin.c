@@ -6,7 +6,7 @@
 /*   By: marbarre <marbarre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/06 19:13:12 by marbarre          #+#    #+#             */
-/*   Updated: 2024/10/06 19:15:22 by marbarre         ###   ########.fr       */
+/*   Updated: 2024/10/07 19:46:03 by marbarre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,10 +66,13 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	int		i;
 
 	if (size == 0)
-		return ((char *)malloc (sizeof(char)));
+	{
+		dest = malloc (1 * sizeof(char *));
+		return (dest);
+	}
 	dest = malloc ((ft_length(strs, sep, size) + 1) * sizeof(char));
 	if (dest == 0)
-		return (NULL);
+		return (0);
 	i = 0;
 	dest[0] = 0;
 	while (i < size)
@@ -88,11 +91,11 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	int	size;
 	char	*dest;
 	char	*strs[] = {"uno", "dos", "tres", "quatro"};
-	sep = "/ ";
+	sep = "-.-";
 	size = 4;
 
 	dest = ft_strjoin(size, strs, sep);
-	printf("%s", dest);
+	printf("%s\n", dest);
 	free (dest);
 	return (0);
 }*/

@@ -6,7 +6,7 @@
 /*   By: marbarre <marbarre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 21:40:03 by marbarre          #+#    #+#             */
-/*   Updated: 2024/10/07 17:07:50 by marbarre         ###   ########.fr       */
+/*   Updated: 2024/10/07 19:33:24 by marbarre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,8 +48,8 @@ int	ft_ultimate_range(int **range, int min, int max)
 	int	i;
 	int	size;
 
-	min = -22;
-	max = 37;
+	min = 0;
+	max = 3;
 	size = ft_ultimate_range(&arr, min, max);
 	i = 0;
 	while (i < size)
