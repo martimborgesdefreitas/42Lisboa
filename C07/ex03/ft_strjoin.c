@@ -6,7 +6,7 @@
 /*   By: marbarre <marbarre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/06 19:13:12 by marbarre          #+#    #+#             */
-/*   Updated: 2024/10/07 19:46:03 by marbarre         ###   ########.fr       */
+/*   Updated: 2024/10/07 20:35:44 by marbarre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,11 @@ int	ft_length(char **strs, char *sep, int size)
 	tlen = 0;
 	while (i < size)
 	{
-		tlen = tlen + ft_strlen(strs[i]) + ft_strlen(sep);
+		tlen = tlen + ft_strlen(strs[i]);
+		if (i < size - 1)
+			tlen = tlen + ft_strlen(sep);
 		i++;
 	}
-	tlen = tlen - ft_strlen (sep);
 	return (tlen);
 }
 
@@ -67,14 +68,16 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 
 	if (size == 0)
 	{
-		dest = malloc (1 * sizeof(char *));
+		dest = malloc (1 * sizeof(char));
+		if (dest)
+			dest[0] = '\0';
 		return (dest);
 	}
 	dest = malloc ((ft_length(strs, sep, size) + 1) * sizeof(char));
 	if (dest == 0)
 		return (0);
 	i = 0;
-	dest[0] = 0;
+	dest[0] = '\0';
 	while (i < size)
 	{
 		ft_strcat(dest, strs[i]);
@@ -91,8 +94,8 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	int	size;
 	char	*dest;
 	char	*strs[] = {"uno", "dos", "tres", "quatro"};
-	sep = "-.-";
-	size = 4;
+	sep = "9849871";
+	size = 0;
 
 	dest = ft_strjoin(size, strs, sep);
 	printf("%s\n", dest);
