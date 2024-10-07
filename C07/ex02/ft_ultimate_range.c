@@ -6,7 +6,7 @@
 /*   By: marbarre <marbarre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 21:40:03 by marbarre          #+#    #+#             */
-/*   Updated: 2024/10/01 21:16:14 by marbarre         ###   ########.fr       */
+/*   Updated: 2024/10/07 15:55:01 by marbarre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,17 @@ int	ft_ultimate_range(int **range, int min, int max)
 	int	size;
 	int	i;
 
-	*range = malloc ((max - min) * sizeof(int));
-	if (*range == NULL)
-		return (-1);
 	if (min >= max)
 	{
 		*range = NULL;
 		return (0);
+	}
+	//*range = malloc ((max - min) * sizeof(int *));
+	*range = NULL;
+	if (*range == NULL)
+	{
+		//*range = NULL;
+		return (-1);
 	}
 	i = 0;
 	size = max - min;
@@ -37,7 +41,7 @@ int	ft_ultimate_range(int **range, int min, int max)
 	return (size);
 }
 
-/*int	main(void)
+int	main(void)
 {
 	int	min;
 	int	max;
@@ -45,8 +49,8 @@ int	ft_ultimate_range(int **range, int min, int max)
 	int	i;
 	int	size;
 
-	min = -68;
-	max = 74;
+	min = 0;
+	max = 3;
 	size = ft_ultimate_range(&arr, min, max);
 	i = 0;
 	while (i < max - min)
@@ -58,4 +62,4 @@ int	ft_ultimate_range(int **range, int min, int max)
 	printf("size of the array is: %d", size);
 	free(arr);
 	return (0);
-}*/
+}
